@@ -1,0 +1,33 @@
+{
+    "name": "qiqiuyun/link-link",
+    "description": "link share",
+    "autoload": {
+        "psr-0": { 
+            "": "src/",
+            "AdminUI\\" : "adminui/src",
+            "Worker\\" : "worker/src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Wellming Li",
+            "email": "wellming.li@howzhi.com"
+        }
+    ],
+    "require": {
+        "symfony/console": "2.6.4",
+        "symfony/security": "2.6.4",
+        "symfony/finder": "2.6.4",
+        "doctrine/dbal": "2.5.1",
+        "monolog/monolog": "1.13.0",
+        "silex/silex": "1.2.3",
+        "twig/twig": "1.18.0",
+        "symfony/twig-bridge": "2.6.4",
+        "robmorgan/phinx": "0.4.3",
+        "swiftmailer/swiftmailer": "5.3.1",
+        "gregwar/captcha": "1.0.12",
+        "pda/pheanstalk": "3.0.2",
+        "phpoffice/phpexcel": "1.8.1",
+        "footstones/plumber": "v0.4.1"
+    }
+}

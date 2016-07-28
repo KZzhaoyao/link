@@ -1,0 +1,197 @@
+/*
+ * Base structure
+ */
+
+.empty {
+  padding: 50px;
+  text-align: center;
+  color: #777;
+}
+
+.text-light {
+  color: #ddd;
+}
+
+.modal legend {
+  font-size: 16px;
+}
+
+/*step.css*/
+.panel-step{
+    margin-top: 27px;
+    margin-left: 0;
+    margin-right: 0;  
+}
+.panel-step li{
+   
+    display: inline-block;
+     width: 290px;
+     background-color:#bebebe;
+     position: relative;
+}
+.panel-step .panel-first{
+     margin-right: 45px;
+}
+
+.panel-step .panel-first:after{
+ 
+      right: -14.2%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-left-color: #bebebe;
+      border-width: 21px;
+}
+.panel-step .panel-second{
+    width: 270px;
+    margin-right: 48px;
+}
+
+.panel-step .panel-second a{
+     padding: 10px 9px;
+}
+.panel-step .panel-second:after{
+      right: -15.5%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-left-color: #bebebe;
+      border-width: 21px;
+}
+.panel-step .panel-second:before{
+      left: -14.2%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: #bebebe #bebebe #bebebe transparent;
+      border-width: 21px;
+}
+.panel-step .panel-third:before{
+      left: -14.2%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: #bebebe #bebebe #bebebe transparent;
+      border-width: 21px;
+}
+.panel-step a{
+    display:inline-block;
+
+    padding: 10px 35px;
+    font-size: 16px;
+    color:#fff;
+    text-decoration: none;
+   
+}
+.panel-step .panel-first.active,.panel-step .panel-second.active,.panel-step .panel-third.active{
+    background-color: #428BCA;
+}
+.panel-step .panel-first.active:after,.panel-step .panel-second.active:after{
+    border-left-color: #428BCA;
+}
+.panel-step .panel-second.active:before,.panel-step .panel-third.active:before{
+    border-color: #428BCA #428BCA #428BCA transparent;
+}
+
+/*step-success*/
+.submit-success{
+    background-color: #e5f8f5;
+    border: 1px solid #55d7c3;
+    position: relative;
+    height: 182px;
+    margin-top: 30px;
+}
+.panel-success p{
+  width: 255px;
+  margin: 0 auto;
+  color: #777;
+  line-height: 30px;
+  padding-top: 30px;
+}
+.panel-success p span:first-child{
+    font-size: 24px;
+}
+.panel-success .glyphicon{
+    font-size: 52px;
+    color: #21C67E;
+    position: absolute;
+    left: 249px;
+    top: 33px;
+}
+.submit-success.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+/*.success-logo{
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    background: url("../img/invoice/success.png") no-repeat;
+    position: absolute;
+      left: 249px;
+      top: 33px;
+}*/
+.submit-success .panel-need{
+      width: 428px;
+      margin: 0 auto;
+      padding-top: 29px;
+      color: #777;
+
+}
+/*fail start*/
+.submit-error{
+    background-color: #F2DEDE;
+    border: 1px solid #a94442;
+    position: relative;
+    height: 182px;
+    margin-top: 30px;
+}
+.panel-error p{
+  width: 250px;
+  margin: 0 auto;
+  color: #777;
+  line-height: 30px;
+  padding-top: 30px;
+}
+.panel-error p span{
+    font-size: 24px;
+}
+.panel-error .glyphicon{
+    font-size: 52px;
+    color: #a94442;
+    position: absolute;
+    left: 249px;
+    top: 33px;
+}
+.submit-error.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.submit-error .panel-need{
+      width: 428px;
+      margin: 0 auto;
+      padding-top: 29px;
+      color: #777;
+
+}
+.money-color {
+    color: #FF842E;
+}
+/*fail end*/
+
+/*add bigger modal*/
+.modal-huge{
+    width: 1240px;  
+}

@@ -1,0 +1,37 @@
+body {
+  background-size: 100%;
+}
+.login {
+  height: 350px;
+  width: 300px;
+  background-color: white;
+  float: right;
+  margin-top: 100px;
+  margin-right: 100px;
+  border: 2px solid #ddd;
+}
+.login p {
+  width: 300px;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.login .field {
+  width: 200px;
+  height: 30px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  border-radius: 5px;
+}
+.login #login_btn {
+  height: 30px;
+  width: 200px;
+  margin-left: 50px;
+  background-color: #428bca;
+  border: 1px solid #357ebd;
+  border-radius: 5px;
+  color: white;
+}
+.login #login_btn:hover {
+  background-color: #3276b1;
+}

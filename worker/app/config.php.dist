@@ -1,0 +1,50 @@
+<?php
+
+return [
+    'bootstrap' => __DIR__ . '/bootstrap.php',
+    'message_server' => [
+        'host' => '127.0.0.1',
+        'port' => 11300,
+    ],
+    'tubes' => [
+        'rootUpdateLiveRoom' => [
+            'worker_num' => 5, 
+            'class' => 'Worker\\LiveRoomUpdateWorker'
+        ],
+        'rootAddSmsSendTube' => [
+            'worker_num' => 5, 
+            'class' => 'Worker\\AddSmsWorker'
+        ],
+        'smsSendAlias' => [
+            'worker_num' => 5, 
+            'class' => 'Worker\\SmsSenderWorker'
+        ],
+        'smsCallback' => [
+            'worker_num' => 5, 
+            'class' => 'Worker\\SmsCallbackWorker'
+        ],
+       'easyTrialTube' => [
+            'worker_num' => 1,
+            'class' => 'Worker\\EasyTrialWorker'
+        ],
+        'trialFileReceiveTube' => [
+            'worker_num' => 1,
+            'class' => 'Worker\\TrialFileReceiveWorker'
+        ],
+        'trialFileRenameTube' => [
+            'worker_num' => 5,
+            'class' => 'Worker\\TrialFileRenameWorker'
+        ],
+        'liveroom_event' => [
+            'worker_num' => 5,
+            'class' => 'Worker\\LiveroomEventWorker'
+        ],
+    ],
+    'log_path' => __DIR__ . '/../../var/logs/task.log',
+    'output_path' => __DIR__ . '/../../var/logs/plumber.output.log',
+    'pid_path' => __DIR__ . '/../../var/logs/plumber.pid',
+    'socket_path' => __DIR__ . '/../../var/logs/plumber.sock',
+    'daemonize' => 1,
+    'reserve_timeout' => 10,
+    'execute_timeout' => 60,
+];

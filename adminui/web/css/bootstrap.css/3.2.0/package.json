@@ -1,0 +1,16 @@
+{
+  "name": "bootstrap.css",
+  "version": "3.2.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sorrycc/bootstrap.css.git"
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "index.css"
+  }
+}

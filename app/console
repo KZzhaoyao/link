@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use EdusohoNet\Service\Common\ServiceKernel;
+use Symfony\Component\Console\Application;
+
+
+$config = include __DIR__ . '/config.php';
+$serviceKernel = ServiceKernel::create('dev', true);
+$serviceKernel->setParameterBag($config);
+$serviceKernel->setDirectories(array(
+    'cache' => dirname(__DIR__) . '/var/cache',
+    'log' => dirname(__DIR__) . '/var/logs',
+));
+
+
+$application->run();

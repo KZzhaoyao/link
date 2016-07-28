@@ -1,0 +1,38 @@
+{% extends 'layout.html.twig' %}
+{% set script_controller = 'admin/delete-category' %}
+
+{% block main %}
+    <section class="content-header">
+        <div class="pull-right">
+            <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#modal" data-url="{{ path('add_category') }}">添加分类</button>
+        </div>
+        <h1>分类管理</h1>
+    </section>
+<section class="content">
+    <div class="box">
+      <div class="box-body">
+<table class="table table-striped"  id="proxy-list">
+ <thead>
+                    <tr>
+                        <th class="col-sm-10 control-label">分类</th>
+                        <th class="col-sm-1 control-label">修改</th>
+                        <th class="col-sm-1 control-label">删除</th>
+                      </tr>
+</thead>
+  
+<tbody>
+                   {% for category in categorys %}
+                        <tr>
+                            <td>{{ category.name}}</td>
+                            <td><a class="btn btn-primary btn-sm" data-target="#modal" data-url="{{ path('update_category', {categoryId:category.id} ) }}" data-toggle="modal">修改</a></td>
+                            <td><a class="btn btn-danger btn-sm modal-delete-btn" data-target="#modal" data-toggle="modal" data-url="{{ path('delete_category', {categoryId:category.id} ) }}">删除</a></td>
+                        </tr>
+                    {% endfor %}
+</tbody>
+</table>
+    </div>
+    </div>
+      
+  </section>
+
+{% endblock %}

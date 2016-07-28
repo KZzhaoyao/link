@@ -1,0 +1,22 @@
+{% extends 'modal-layout.html.twig' %}
+{% block title %}修改分类{% endblock %}
+{% block main %}
+
+<form id="update-category-form" class="form-horizontal" action="{{ path('update_category') }}" method="post">
+
+  <div class="form-group">
+    <label class="col-sm-3 control-label" for="field-name">分类</label>
+    <div class="col-sm-6 controls">
+      <input id="field-name" class="form-control" type="text" name="name" value="{{categoryName.name}}">
+      <input type="hidden" name="id" value="{{categoryName.id}}">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-link" data-dismiss="modal">取消</button>
+    <button class="btn btn-primary" type="submit">保存</button>
+  </div>
+</form>
+
+<script> app.load('admin/update-category.js'); </script>
+
+{% endblock %}
