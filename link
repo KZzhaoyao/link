@@ -1,0 +1,39 @@
+server {
+
+    listen 80;
+    server_name link.edusoho-dev.net;
+    root /var/www/link-link/adminui/web;
+
+    access_log /var/log/nginx/link.edusoho-dev.net.access.log;
+    error_log /var/log/nginx/link.edusoho-dev.net.error.log;
+
+    location / {
+        index index_dev.php;
+        try_files $uri @rewriteapp;
+    }
+
+    location @rewriteapp {
+        rewrite ^(.*)$ /index_dev.php/$1 last;
+    }
+
+    location ~ ^/(index|index_dev)\.php(/|$) {
+        fastcgi_pass   unix:/var/run/php5-fpm.sock;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+        fastcgi_buffer_size 128k;
+        fastcgi_buffers 8 128k;
+    }
+
+    location ~* \.(jpg|jpeg|gif|png|ico|swf)$ {
+        expires 3y;
+        access_log off;
+        gzip off;
+    }
+
+    location ~* \.(css|js)$ {
+        access_log off;
+        expires 3y;
+    }  
+}
+
